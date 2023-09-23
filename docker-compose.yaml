@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+  postgres-db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=transaction-db
+    volumes:
+      - ./back-up/postgres-data:/data/db
